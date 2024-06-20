@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+         
+ 	<welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+     </welcome-file-list>
+    
+     <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.reservation.Login</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    
+    <display-name>OnlineReservationSystem</display-name>
+
+     <servlet>
+        <servlet-name>ReservationServlet</servlet-name>
+        <servlet-class>com.reservation.Reservation</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ReservationServlet</servlet-name>
+        <url-pattern>/Reservation</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>FetchReservationDetails</servlet-name>
+        <servlet-class>com.reservation.FetchReservationDetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FetchReservationDetails</servlet-name>
+        <url-pattern>/FetchReservationDetails</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+    <servlet-name>CancellationServlet</servlet-name>
+    <servlet-class>com.reservation.Cancellation</servlet-class>
+</servlet>
+	
+<servlet-mapping>
+    <servlet-name>CancellationServlet</servlet-name>
+    <url-pattern>/Cancellation</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
